@@ -24,10 +24,11 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - name: Verify root-path build and tests
         run: npm run build && npm test
-      - name: Build project-path preview
+      - name: Build custom-domain website
         run: npm run build
         env:
           ZZOO_GITHUB_PAGES: '1'
+          ZZOO_SITE: 'https://zzoo.asia'
           ASTRO_TELEMETRY_DISABLED: '1'
       - name: Prepare public artifact without original model
         run: |

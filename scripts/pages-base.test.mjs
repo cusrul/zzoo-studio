@@ -1,6 +1,18 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { withBase, prefixHtml } from './pages-base.mjs';
+import { withBase, prefixHtml, deploymentSettings } from './pages-base.mjs';
+
+test('custom domain uses root paths while project preview and local defaults remain available', () => {
+  assert.deepEqual(deploymentSettings({}), { base: '', site: undefined });
+  assert.deepEqual(deploymentSettings({ ZZOO_GITHUB_PAGES: '1' }),
+    { base: '/zzoo-studio', site: 'https://cusrul.github.io' });
+  assert.deepEqual(deploymentSettings({ ZZOO_GITHUB_PAGES: '1', ZZOO_SITE: 'https://zzoo.asia' }),
+    { base: '', site: 'https://zzoo.asia' });
+  for (const site of ['http://zzoo.asia', 'https://zzoo.asia/sub/', 'https://user:pass@zzoo.asia',
+    'https://zzoo.asia/?a=1', 'https://zzoo.asia/#x']) {
+    assert.throws(() => deploymentSettings({ ZZOO_SITE: site }));
+  }
+});
 
 test('Pages prefixes root URLs exactly once and leaves external/relative links alone', () => {
   for (const url of ['/docs/', '/media/image.webp', '/#stores', '/watch-demo/index.html']) {

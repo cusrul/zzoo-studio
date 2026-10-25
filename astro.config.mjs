@@ -2,11 +2,11 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import projects from "./src/data/generated-projects.json" with { type: "json" };
-import { pagesBase, pagesBaseIntegration } from "./scripts/pages-base.mjs";
+import { pagesBase, pagesSite, pagesBaseIntegration } from "./scripts/pages-base.mjs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: pagesBase ? 'https://cusrul.github.io' : undefined,
+  site: pagesSite,
   base: pagesBase || '/',
   vite: { server: { watch: { ignored: ["**/.tools/**"] } } },
   integrations: [

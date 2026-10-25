@@ -2,7 +2,21 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const pagesBase = process.env.ZZOO_GITHUB_PAGES === '1' ? '/zzoo-studio' : '';
+export function deploymentSettings(env) {
+  if (env.ZZOO_SITE) {
+    const site = new URL(env.ZZOO_SITE);
+    if (site.protocol !== 'https:' || site.username || site.password ||
+        site.pathname !== '/' || site.search || site.hash) {
+      throw new Error('ZZOO_SITE must be an HTTPS origin without a path or credentials.');
+    }
+    return { base: '', site: site.origin };
+  }
+  return env.ZZOO_GITHUB_PAGES === '1'
+    ? { base: '/zzoo-studio', site: 'https://cusrul.github.io' }
+    : { base: '', site: undefined };
+}
+
+export const { base: pagesBase, site: pagesSite } = deploymentSettings(process.env);
 
 export function withBase(url, base) {
   if (!base || !url.startsWith('/') || url.startsWith('//') ||

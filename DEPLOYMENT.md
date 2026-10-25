@@ -2,14 +2,14 @@
 
 ## GitHub Pages
 
-网站地址：<https://cusrul.github.io/zzoo-studio/>。
+网站地址：<https://zzoo.asia/>。
 
 仓库 Settings → Pages → Source 使用 GitHub Actions。
 `.github/workflows/pages.yml` 在推送 main 或手动触发后执行：
 
 1. 按锁文件进行干净安装。
 2. 构建根路径版本并运行测试。
-3. 使用 `ZZOO_GITHUB_PAGES=1` 构建 `/zzoo-studio/` 子路径版本。
+3. 设置 `ZZOO_SITE=https://zzoo.asia` 构建自定义域名根路径版本。
 4. 检查生成页面的内部链接、图片与静态文件大小。
 5. 排除原始 `watch-demo/model.glb`，上传压缩模型与其他静态文件。
 6. 将构建产物部署到 Pages。
@@ -27,7 +27,8 @@ npm test
 npm run preview -- --host 127.0.0.1 --port 4322
 ```
 
-验证项目子路径时设置 `ZZOO_GITHUB_PAGES=1`；普通根路径构建不要设置该变量。
+验证旧项目子路径时只设置 `ZZOO_GITHUB_PAGES=1`；自定义域名通过 `ZZOO_SITE` 指定 HTTPS 源站地址并使用根路径。
+普通本地构建不必设置这两个变量。Pages 自定义域名在仓库设置中绑定，域名归属 TXT 应长期保留。
 部署后实际检查首页、文档目录、图片、搜索和模型按键。
 构建通过不代表所有地区或运营商网络均可稳定访问。
 

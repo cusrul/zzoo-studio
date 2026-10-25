@@ -2,7 +2,7 @@
 
 项目展示与开发文档网站，使用 Astro、Starlight 和 Three.js。
 
-[访问网站](https://cusrul.github.io/zzoo-studio/) · [Crabit 文档](https://cusrul.github.io/zzoo-studio/docs/crabit/)
+[访问网站](https://zzoo.asia/) · [Crabit 文档](https://zzoo.asia/docs/crabit/)
 
 ## 本地运行
 
