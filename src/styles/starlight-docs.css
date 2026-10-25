@@ -35,6 +35,9 @@
 }
 
 :root[data-theme='light'] {
+	--sl-color-bg: #f7fafb;
+	--sl-color-bg-nav: #f7fafb;
+	--sl-color-bg-sidebar: #f7fafb;
 	--sl-color-blue-low: #f1f3f4;
 	--sl-color-blue: #5f6368;
 	--sl-color-blue-high: #202124;
