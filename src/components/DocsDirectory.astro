@@ -1,0 +1,18 @@
+---
+import projects from "../data/generated-projects.json";
+---
+
+<div class="docs-project-directory">
+  {projects.map((project) => (
+    <section>
+      <h2>
+        <a href={`/docs/${project.id}/`}>{project.title}</a>
+      </h2>
+      <p>{project.tagline}</p>
+      <p>
+        <a href={`/docs/${project.id}/`}>阅读文档 →</a> ·{" "}
+        <a href={`/projects/${project.id}/`}>项目介绍 →</a>
+      </p>
+    </section>
+  ))}
+</div>

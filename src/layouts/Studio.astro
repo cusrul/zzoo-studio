@@ -1,0 +1,54 @@
+---
+import "../styles/studio.css";
+const {
+  title = "ZZOO 动动物园",
+  description = "ZZOO 动动物园的硬件、软件与开源项目。体验作品，查阅文档，动手开发。",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#fafaf8" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header wrap">
+      <a class="brand" href="/" aria-label="ZZOO 动动物园首页">
+        <img
+          class="brand-art"
+          src="/brand/zzoo.svg"
+          alt="ZZOO 动动物园"
+          width="393"
+          height="520"
+        />
+      </a>
+      <nav aria-label="主导航">
+        <a href="/projects/">项目</a>
+        <a href="/docs/">文档</a>
+        <a href="/#stores">店铺</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer wrap" id="stores">
+      <div class="store-list" aria-label="店铺与代码主页">
+        <span>
+          淘宝店铺 <small>待开放</small>
+        </span>
+        <span>
+          闲鱼主页 <small>待开放</small>
+        </span>
+        <span>
+          GitHub 主页 <small>待开放</small>
+        </span>
+      </div>
+      <small>本地预览</small>
+    </footer>
+  </body>
+</html>

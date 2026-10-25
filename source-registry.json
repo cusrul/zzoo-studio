@@ -1,0 +1,27 @@
+[
+  {
+    "id": "crabit",
+    "repository": null,
+    "ref": "0a26ca553b87fcf1cb2b1deb77d0aacf034a00e9",
+    "manifest": "showcase/product.json",
+    "pages": [
+      { "source": "showcase/docs/overview.md", "slug": "overview" },
+      { "source": "showcase/docs/start.md", "slug": "start" },
+      { "source": "showcase/docs/connect.md", "slug": "connect" },
+      { "source": "showcase/docs/app-guide.md", "slug": "app-guide" },
+      { "source": "showcase/docs/replicate.md", "slug": "replicate" },
+      { "source": "showcase/docs/develop.md", "slug": "develop" },
+      { "source": "showcase/docs/setup.md", "slug": "setup" },
+      { "source": "showcase/docs/first-app.md", "slug": "first-app" },
+      { "source": "showcase/docs/ui-development.md", "slug": "ui-development" },
+      { "source": "showcase/docs/resources.md", "slug": "resources" },
+      { "source": "showcase/docs/flutter-first-page.md", "slug": "flutter-first-page" },
+      { "source": "showcase/docs/system-walkthrough.md", "slug": "system-walkthrough" },
+      { "source": "showcase/docs/flutter-development.md", "slug": "flutter-development" },
+      { "source": "showcase/docs/integration-lab.md", "slug": "integration-lab" },
+      { "source": "showcase/docs/sensor-project.md", "slug": "sensor-project" },
+      { "source": "showcase/docs/update.md", "slug": "update" }
+    ],
+    "env": "ZZOO_CRABIT_SOURCE"
+  }
+]

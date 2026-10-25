@@ -1,0 +1,29 @@
+{
+  "name": "zzoo-studio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --background",
+    "start": "astro dev --background",
+    "content:sync": "node scripts/import-content.mjs",
+    "prebuild": "node scripts/prepare-web-model.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "format": "prettier --plugin prettier-plugin-astro --write src/pages src/layouts/Studio.astro src/styles/studio.css astro.config.mjs",
+    "build": "astro build",
+    "postbuild": "node scripts/check-built-site.mjs",
+    "preview": "astro preview",
+    "deploy:check": "wrangler deploy --dry-run --outdir build/cloudflare-dry-run",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.6",
+    "astro": "^7.2.10",
+    "sharp": "^0.35.3",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2",
+    "wrangler": "4.152.0"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "source": "zzoo-original.png",
+  "sourceSha256": "df241d1996907cee97ee6daf594573d19399156d06789219075224297c712d72",
+  "sourcePixels": {
+    "width": 1254,
+    "height": 1254
+  },
+  "sourceMarkBounds": {
+    "x": 430,
+    "y": 350,
+    "width": 393,
+    "height": 520
+  },
+  "output": "zzoo.svg",
+  "outputViewBox": "0 0 393 520",
+  "transparentBackground": true,
+  "colors": {
+    "ink": "#171717",
+    "orange": {
+      "value": "#f96805",
+      "derivation": "Per-channel median of the source orange core pixels."
+    }
+  },
+  "tracing": {
+    "foreground": "Source luminance >= 80/255; orange hue classified separately.",
+    "contourMethod": "Oriented pixel-boundary edges with right-turn tie-breaking at diagonal contacts.",
+    "simplification": "Closed-loop Ramer-Douglas-Peucker, 0.8 source pixels maximum deviation.",
+    "fillRule": "evenodd, preserving counters and enclosed transparent holes.",
+    "fittedGeometry": {
+      "capsuleBars": [
+        {
+          "sourceBounds": {
+            "x": 430,
+            "y": 350,
+            "width": 182,
+            "height": 74
+          },
+          "cornerRadius": 30.5,
+          "rowBoundaryRmse": 5.559,
+          "curve": "Cubic rounded rectangle fitted to source row extents."
+        },
+        {
+          "sourceBounds": {
+            "x": 641,
+            "y": 350,
+            "width": 182,
+            "height": 74
+          },
+          "cornerRadius": 29,
+          "rowBoundaryRmse": 1.033,
+          "curve": "Cubic rounded rectangle fitted to source row extents."
+        },
+        {
+          "sourceBounds": {
+            "x": 430,
+            "y": 526,
+            "width": 182,
+            "height": 61
+          },
+          "cornerRadius": 28.9,
+          "rowBoundaryRmse": 7.404,
+          "curve": "Cubic rounded rectangle fitted to source row extents."
+        },
+        {
+          "sourceBounds": {
+            "x": 640,
+            "y": 526,
+            "width": 183,
+            "height": 61
+          },
+          "cornerRadius": 29.7,
+          "rowBoundaryRmse": 7.33,
+          "curve": "Cubic rounded rectangle fitted to source row extents."
+        }
+      ],
+      "darkDotEllipses": 137,
+      "orangeDotEllipses": 2,
+      "preservedAsTracedPaths": 3,
+      "minimumEllipseMaskIoU": 0.92,
+      "dotRegionBottom": 810,
+      "eyeCounters": 2,
+      "chineseGlyphs": "Kept on the traced path contour; not classified as dots or fitted geometry."
+    },
+    "sourceForegroundPixels": 80021,
+    "sourceOrangePixels": 941,
+    "discardedOrangeNoisePixels": 43,
+    "minimumOrangeComponentPixels": 128,
+    "dark": {
+      "contours": 160,
+      "holes": 3,
+      "sourceBoundaryVertices": 13074
+    },
+    "orange": {
+      "contours": 2,
+      "holes": 0,
+      "sourceBoundaryVertices": 198
+    }
+  }
+}

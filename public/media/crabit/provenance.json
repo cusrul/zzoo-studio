@@ -1,0 +1,53 @@
+{
+  "description": "Owner-supplied assembly and wearing photos; resized, EXIF orientation applied, metadata omitted. No raw source changed.",
+  "images": [
+    {
+      "source": "IMG_3613.HEIC",
+      "output": "parts.webp",
+      "width": 1280,
+      "height": 960,
+      "bytes": 46378,
+      "sha256": "ff1cb46ac79cd77e857cfd2ae70be55306e18a7a84aa6b892fb5dec45c2399f2"
+    },
+    {
+      "source": "IMG_3616.HEIC",
+      "output": "board-front.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 42302,
+      "sha256": "893262422727ba7004cf6cfe514a8294e12224c93c9d8590b574470b80df0923"
+    },
+    {
+      "source": "IMG_3617.HEIC",
+      "output": "board-back.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 27578,
+      "sha256": "6ab8fa221c93b036d4240350f7407e739842b36b9d8bd91869ea1dc057388635"
+    },
+    {
+      "source": "IMG_3619.HEIC",
+      "output": "display.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 33338,
+      "sha256": "61a68e68822f2907e2d8bbffb49c72d8a6b30d514dcf26fd20918084d56ac214"
+    },
+    {
+      "source": "IMG_3650.HEIC",
+      "output": "strap.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 47878,
+      "sha256": "790a2481352e35b5874f72eb48730a23e208484aab823f8369fc2d82b2fa447b"
+    },
+    {
+      "source": "IMG_3656.HEIC",
+      "output": "wearing.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 55162,
+      "sha256": "d1d71fa7232d24b319d16b90665e745a9cc10677e59652cc813f74f07b03a4d1"
+    }
+  ]
+}

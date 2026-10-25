@@ -1,0 +1,60 @@
+{
+  "description": "Actual Flutter widgets with fixture data and browser-rendered 3D model with local NanoUI. Not physical-device screenshots or hardware acceptance. Only whitespace cropped from two Flutter panels; lossless WebP.",
+  "simulatorSource": "0f5afe8e9e948b2a36d0cfa8c4348430ae647742",
+  "images": [
+    {
+      "output": "flutter-settings.webp",
+      "source": "apps/mobile/build/website-previews/simulated-preferences-390.png",
+      "sourceSha256": "addc9125d5d67e50b60c61db3b856516ad9979c125f249ec5738dff25a7d0853",
+      "sha256": "8a4824ac65e1b968590e4f73323a3c2174862deeb9af7477595ad8e39a675697",
+      "bytes": 11766,
+      "width": 390,
+      "height": 870
+    },
+    {
+      "output": "flutter-battery.webp",
+      "source": "apps/mobile/build/website-previews/simulated-battery-390.png",
+      "sourceSha256": "142278d64443cf9a85ee42c8bd20b9906cd62581ec5370d51d3c97e4baa677fa",
+      "sha256": "acb7158a25ed6e6c8f2e88f3c3bef2f96460246982cd749eab06a2c33129cefc",
+      "bytes": 7212,
+      "width": 390,
+      "height": 540
+    },
+    {
+      "output": "flutter-scripts.webp",
+      "source": "apps/mobile/build/usb-workbench-430.png",
+      "sourceSha256": "40bddbcb69255a2c505b391f79db44da5e1dcd106ee568d5940dad639ab93f97",
+      "sha256": "f5ec895d0f7e9c6af6d6c622cb93520dc192d10cf74deea8b0cd27f2f713fdd0",
+      "bytes": 11254,
+      "width": 430,
+      "height": 850
+    },
+    {
+      "output": "watch-menu.webp",
+      "source": "browser screenshot build/watch-menu.png",
+      "sourceSha256": "abba51e29df97adff1851882ad8bbc1d106439a51de14489589f9a143259136a",
+      "sha256": "845f6292e10b5bcd59398086deeccaf1c86647c7b31f04eb6251f2150b4e1ba3",
+      "bytes": 52518,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "output": "watch-sensors.webp",
+      "source": "browser screenshot build/watch-sensors.png",
+      "sourceSha256": "6868b814ee877ddace6f0f845875bcc0562a8e52c33fc0a4516fd7f90869df36",
+      "sha256": "900e13a3b2549379146ac38dcec9f61b5cc9565d961dafed1ff2b3aa68ee1869",
+      "bytes": 49656,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "output": "watch-settings.webp",
+      "source": "browser screenshot build/watch-settings.png",
+      "sourceSha256": "1cf0c9e47c45e197bd10dbce47153a5b659708fa8fa597f81bb1ee3a9bde88fc",
+      "sha256": "47559b35dcc02cad9485c150b7546833bfefb3fc74f8e8143f78a3c58da1041d",
+      "bytes": 49280,
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}

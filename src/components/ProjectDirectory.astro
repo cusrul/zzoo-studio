@@ -1,0 +1,33 @@
+---
+import projects from "../data/generated-projects.json";
+import WatchInteractive from "./WatchInteractive.astro";
+---
+
+<section aria-label="项目目录">
+  {projects.map((project) => (
+    <article class="project-entry">
+      <div>
+        <h2>
+          <a href={`/projects/${project.id}/`}>{project.title}</a>
+        </h2>
+        <p class="muted">{project.tagline}</p>
+        <div class="hero-actions">
+          <a class="text-link" href={`/projects/${project.id}/`}>
+            了解项目 ↗
+          </a>
+          <a class="text-link" href={`/docs/${project.id}/`}>
+            使用文档 ↗
+          </a>
+        </div>
+      </div>
+      {project.id === "crabit" && (
+        <div class="model-panel">
+          <WatchInteractive />
+          <p class="model-caption">
+            拖动旋转，点侧键操作。NanoUI 本地模拟，不连接设备。
+          </p>
+        </div>
+      )}
+    </article>
+  ))}
+</section>

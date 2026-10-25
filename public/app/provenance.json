@@ -1,0 +1,50 @@
+{
+  "label": "SCREENSHOT SOURCES — SEE PER-ASSET LIMITS",
+  "labelPlacement": "provenance metadata; image pixels are unmodified Flutter test output",
+  "generatedDate": "2026-10-24",
+  "sourceCommit": "0487fb753d1c0eee717c66b77bab61aab86448f1",
+  "runtime": {
+    "flutter": "3.41.6",
+    "dart": "3.11.4",
+    "host": "Windows"
+  },
+  "assets": {
+    "home.png": {
+      "source": "Maintainer-provided complete Flutter home screenshot",
+      "sourceCommit": null,
+      "captureDate": null,
+      "width": 1283,
+      "height": 824,
+      "unmodifiedUserScreenshot": true,
+      "fixtureLimits": "Historical user screenshot; not a new capture or evidence of a current live connection."
+    },
+    "settings.png": {
+      "width": 390,
+      "height": 1100,
+      "sha256": "addc9125d5d67e50b60c61db3b856516ad9979c125f249ec5738dff25a7d0853",
+      "sourceOutput": "apps/mobile/build/website-previews/simulated-preferences-390.png",
+      "test": "apps/mobile/test/product_polish_preview_test.dart",
+      "testCase": "product panels remain readable at phone and desktop widths",
+      "command": "$env:CRABIT_PRODUCT_PREVIEWS = (Join-Path (Get-Location) 'build/website-previews'); flutter test test/product_polish_preview_test.dart --reporter expanded",
+      "workingDirectory": "apps/mobile",
+      "widget": "WatchPreferencesPanel",
+      "fixtureLimits": "A deterministic PreferencesGateway returns fixed sample preferences; this is not a device read or a full app-shell capture.",
+      "hardwareCapture": false,
+      "unmodifiedFlutterOutput": true
+    },
+    "scripts.png": {
+      "width": 430,
+      "height": 850,
+      "sha256": "40bddbcb69255a2c505b391f79db44da5e1dcd106ee568d5940dad639ab93f97",
+      "sourceOutput": "apps/mobile/build/usb-workbench-430.png",
+      "test": "apps/mobile/test/usb_workbench_preview.dart",
+      "testCase": "workbench wide and compact preview",
+      "command": "flutter test --no-pub --update-goldens test/usb_workbench_preview.dart --reporter expanded",
+      "workingDirectory": "apps/mobile",
+      "widget": "BadUsbPage",
+      "fixtureLimits": "Uses an in-memory script repository, a disconnected fake USB gateway, and a sample draft; no USB, BLE, device, or Hive access.",
+      "hardwareCapture": false,
+      "unmodifiedFlutterOutput": true
+    }
+  }
+}

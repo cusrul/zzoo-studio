@@ -1,0 +1,23 @@
+{
+  "description": "Actual DeviceConnectionPanel widgets rendered by connection_doc_preview_test.dart with FakeDeviceLink. No hardware connection; empty password input; no actual credentials accessed.",
+  "images": [
+    {
+      "output": "connection-start.webp",
+      "source": "apps/mobile/build/connection-previews/connection-start.png",
+      "bytes": 7392,
+      "sha256": "c2bf2dfae282d0017bd17f9aa3cef57e3395219f5ef60cc5f1809dfb68ac5f99"
+    },
+    {
+      "output": "connection-code.webp",
+      "source": "apps/mobile/build/connection-previews/connection-code.png",
+      "bytes": 11098,
+      "sha256": "d4188e138be543eb957d0b6d1f8f7ccb11523c0acd0a6176c13490b005612a70"
+    },
+    {
+      "output": "connection-ready.webp",
+      "source": "apps/mobile/build/connection-previews/connection-ready.png",
+      "bytes": 9002,
+      "sha256": "5f0b3d6127ab327e96f98f82b4f0ba0a6dc43e8f2063312061a21017ecb22053"
+    }
+  ]
+}

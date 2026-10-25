@@ -1,0 +1,42 @@
+{
+  "label": "Flutter mobile homepage capture provenance",
+  "generatedDate": "2026-10-24",
+  "sourceCommit": "0487fb753d1c0eee717c66b77bab61aab86448f1",
+  "sourceTest": "apps/mobile/test/device_center_render_test.dart",
+  "sourceTestSha256": "3351faaf3b975ac14e0c5f6d1c451d10938a48c814535bd801f9339dc17dc1a8",
+  "runtime": {
+    "flutter": "3.41.6",
+    "dart": "3.11.4",
+    "host": "Windows"
+  },
+  "asset": {
+    "file": "mobile-home.png",
+    "sourceOutput": "apps/mobile/build/device-center-render/phone-verified.png",
+    "width": 360,
+    "height": 800,
+    "bytes": 32514,
+    "sha256": "9ea683943f1b748e123fed9bebaa29807eccfe512bbe89460a51230375add86a",
+    "devicePixelRatio": 1,
+    "unmodifiedFlutterOutput": true
+  },
+  "capture": {
+    "testCase": "render actual device center with labelled simulated states",
+    "wrapper": "apps/mobile/build/device-center-render/render_wrapper_test.dart",
+    "command": "CRABIT_DEVICE_CENTER_SNAPSHOTS=build/device-center-render CRABIT_DEVICE_CENTER_FONT=C:/Windows/Fonts/simhei.ttf flutter test --no-pub build/device-center-render/render_wrapper_test.dart --reporter expanded",
+    "workingDirectory": "apps/mobile",
+    "font": "C:/Windows/Fonts/simhei.ttf",
+    "targetCaptureResult": "phone-verified.png was written successfully",
+    "overallTestResult": "FAIL after the target screenshot had been written",
+    "laterFailure": "The subsequent phone-diagnostics scrollUntilVisible could not find diag-echo (StateError: Bad state: No element)."
+  },
+  "fixtureLimits": {
+    "status": "FakeDeviceLink sets connected/authenticated/ready and a verified pairing state with a simulated 180 ms latency; its diagnostic reply is unavailable;at=12000;age=0.",
+    "visibleDisclosure": "界面验收 · 模拟连接状态，非实机数据",
+    "modelPreview": "buildPreviewStub renders 模型渲染占位; this is not a 3D model render.",
+    "temporaryHive": "A unique empty settings box was created under the ignored product build output for the offstage tab and closed/deleted during teardown; no user Hive data was opened.",
+    "hardwareCapture": false,
+    "liveBle": false,
+    "nativeDevice": false,
+    "physicalPhone": false
+  }
+}

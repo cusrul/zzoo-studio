@@ -1,0 +1,32 @@
+---
+import Studio from "../../layouts/Studio.astro";
+import CrabitShowcase from "../../components/CrabitShowcase.astro";
+import projects from "../../data/generated-projects.json";
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { id: project.id },
+    props: { project },
+  }));
+}
+const { project } = Astro.props;
+---
+
+<Studio
+  title={`${project.title} — ZZOO 动动物园`}
+  description={project.tagline}
+>
+  <div class="wrap project-breadcrumb">
+    <a href="/projects/">所有项目</a> / {project.title}
+  </div>
+  {project.id === "crabit" ? (
+    <CrabitShowcase />
+  ) : (
+    <section class="wrap page-intro">
+      <h1>{project.title}</h1>
+      <p>{project.tagline}</p>
+      <a class="text-link" href={`/docs/${project.id}/`}>
+        使用文档 ↗
+      </a>
+    </section>
+  )}
+</Studio>

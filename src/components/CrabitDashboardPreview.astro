@@ -1,0 +1,154 @@
+---
+import CrabitModelViewer from './CrabitModelViewer.astro';
+---
+
+<section class="crabit-dashboard" aria-label="Crabit 控制中心网页预览">
+	<header class="crabit-dashboard__heading">
+		<div>
+			<p>CRABIT <span aria-hidden="true">/</span> CONTROL CENTER</p>
+			<h2>控制中心</h2>
+		</div>
+		<span class="crabit-dashboard__mode">ASTRO · THREE.JS</span>
+	</header>
+
+	<CrabitModelViewer theme="cyber" autoLoad />
+
+	<article class="crabit-dashboard__status" aria-label="蓝牙连接状态演示">
+		<div class="crabit-dashboard__icon" aria-hidden="true">
+			<svg viewBox="0 0 24 24" fill="none">
+				<path d="m7 7 10 10-5 5V2l5 5L7 17" />
+			</svg>
+		</div>
+		<div class="crabit-dashboard__copy">
+			<strong>设备未连接</strong>
+			<span>网页演示只呈现 Flutter 首页的状态卡样式</span>
+		</div>
+		<span class="crabit-dashboard__badge">BLE · 演示</span>
+	</article>
+</section>
+
+<style>
+	.crabit-dashboard {
+		--mono-accent: #dadce0;
+		padding: 22px;
+		border: 1px solid rgb(255 255 255 / 14%);
+		border-radius: 28px;
+		background:
+			radial-gradient(ellipse at 50% 0, rgb(255 255 255 / 4%), transparent 44%),
+			#0a0a0c;
+		box-shadow: 0 26px 80px rgb(5 13 22 / 17%);
+	}
+
+	.crabit-dashboard__heading {
+		min-height: 76px;
+		padding: 2px 6px 18px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		color: #f8f9fa;
+	}
+
+	.crabit-dashboard__heading p {
+		margin: 0 0 7px;
+		color: #9aa0a6;
+		font-size: 0.65rem;
+		font-weight: 700;
+		letter-spacing: 0.15em;
+	}
+
+	.crabit-dashboard__heading p span {
+		padding-inline: 4px;
+		color: var(--mono-accent);
+	}
+
+	.crabit-dashboard__heading h2 {
+		margin: 0;
+		font-size: 1.16rem;
+		letter-spacing: 0.02em;
+	}
+
+	.crabit-dashboard__mode,
+	.crabit-dashboard__badge {
+		padding: 7px 10px;
+		border: 1px solid rgb(255 255 255 / 20%);
+		border-radius: 999px;
+		color: #e8eaed;
+		background: rgb(255 255 255 / 5%);
+		font-size: 0.65rem;
+		font-weight: 650;
+		letter-spacing: 0.06em;
+		white-space: nowrap;
+	}
+
+	.crabit-dashboard__status {
+		min-height: 98px;
+		margin-top: 17px;
+		padding: 16px 18px;
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		border: 1px solid rgb(154 160 166 / 18%);
+		border-radius: 19px;
+		color: #f1f5fa;
+		background: linear-gradient(100deg, rgb(255 255 255 / 4%), rgb(255 255 255 / 1%));
+	}
+
+	.crabit-dashboard__icon {
+		width: 48px;
+		height: 48px;
+		flex: 0 0 48px;
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		color: #dadce0;
+		background: rgb(255 255 255 / 7%);
+	}
+
+	.crabit-dashboard__icon svg {
+		width: 25px;
+		height: 25px;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 1.7;
+	}
+
+	.crabit-dashboard__copy {
+		min-width: 0;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.crabit-dashboard__copy strong {
+		font-size: 0.96rem;
+	}
+
+	.crabit-dashboard__copy span {
+		color: #9aa0a6;
+		font-size: 0.77rem;
+		line-height: 1.55;
+	}
+
+	@media (max-width: 560px) {
+		.crabit-dashboard {
+			padding: 14px;
+			border-radius: 21px;
+		}
+
+		.crabit-dashboard__mode {
+			font-size: 0.56rem;
+		}
+
+		.crabit-dashboard__status {
+			padding: 13px;
+			gap: 10px;
+		}
+
+		.crabit-dashboard__badge {
+			font-size: 0.56rem;
+		}
+	}
+</style>

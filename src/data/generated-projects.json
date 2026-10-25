@@ -1,0 +1,123 @@
+[
+  {
+    "id": "crabit",
+    "title": "Crabit",
+    "tagline": "戴在手上的极客小玩具",
+    "priceCny": 120,
+    "status": "现货 · 单一配置",
+    "includes": [
+      "手表本体",
+      "电池",
+      "表带"
+    ],
+    "excludes": [
+      "外壳",
+      "充电／数据线"
+    ],
+    "features": [
+      "无线测试",
+      "USB 键盘脚本",
+      "小游戏与传感器",
+      "NanoUI 与 Flutter"
+    ],
+    "modelUrl": "/watch-demo/model.glb",
+    "docs": [
+      {
+        "slug": "overview",
+        "title": "从这里开始",
+        "description": "先玩现有功能，再选择开发或从零复刻。",
+        "href": "/docs/crabit/overview/"
+      },
+      {
+        "slug": "start",
+        "title": "认识手表：从部件到佩戴",
+        "description": "跟着实拍认识主板、显示模组、电池与表带，再开始体验。",
+        "href": "/docs/crabit/start/"
+      },
+      {
+        "slug": "connect",
+        "title": "连接配套 App",
+        "description": "蓝牙连接、验证码与设备数据的区别。",
+        "href": "/docs/crabit/connect/"
+      },
+      {
+        "slug": "app-guide",
+        "title": "用 App 玩转手表",
+        "description": "设备、设置、脚本、时间天气与模型的使用顺序。",
+        "href": "/docs/crabit/app-guide/"
+      },
+      {
+        "slug": "replicate",
+        "title": "硬件复刻前先核对资料",
+        "description": "盘点仓库实际提供的硬件资料，并说明从版本匹配到首次上电的安全关卡。",
+        "href": "/docs/crabit/replicate/"
+      },
+      {
+        "slug": "develop",
+        "title": "开始二次开发",
+        "description": "NanoUI、双端固件与 Flutter 的入口。",
+        "href": "/docs/crabit/develop/"
+      },
+      {
+        "slug": "setup",
+        "title": "零基础准备：源码、编辑器和运行环境",
+        "description": "在Windows上准备第一条学习路线，分清编辑器、编译器和终端。",
+        "href": "/docs/crabit/setup/"
+      },
+      {
+        "slug": "first-app",
+        "title": "第一次运行与修改 NanoUI",
+        "description": "从已有窗口开始，只改文字、增加一行，再用按键改变一个状态。",
+        "href": "/docs/crabit/first-app/"
+      },
+      {
+        "slug": "ui-development",
+        "title": "从一个开关看懂 NanoUI",
+        "description": "用完整可运行的双开关界面学习布局、状态、输入、绘制和生命周期。",
+        "href": "/docs/crabit/ui-development/"
+      },
+      {
+        "slug": "resources",
+        "title": "NanoUI 字体与图片资源",
+        "description": "了解 FirstApp 的资源配置、生成工具、依赖和字体覆盖边界。",
+        "href": "/docs/crabit/resources/"
+      },
+      {
+        "slug": "flutter-first-page",
+        "title": "Flutter：做出你的第一个可交互页面",
+        "description": "从一个能运行的独立页面开始，逐步认识 Text、Column、状态和 setState。",
+        "href": "/docs/crabit/flutter-first-page/"
+      },
+      {
+        "slug": "system-walkthrough",
+        "title": "源码导读：STM32、BW16 与跨端通信",
+        "description": "从启动、应用、传感器到一次真实 echo 的源码路径，分清框架和产品边界。",
+        "href": "/docs/crabit/system-walkthrough/"
+      },
+      {
+        "slug": "flutter-development",
+        "title": "源码导读：Flutter 如何连接设备",
+        "description": "从启动、页面和状态，到设备控制器与 BLE 传输边界。",
+        "href": "/docs/crabit/flutter-development/"
+      },
+      {
+        "slug": "integration-lab",
+        "title": "贯通练习：改变一条只读请求",
+        "description": "不重写底层协议，修改 echo 内容并用主机测试和真实链路分别验收。",
+        "href": "/docs/crabit/integration-lab/"
+      },
+      {
+        "slug": "sensor-project",
+        "title": "小项目：给手表温度做一张 App 卡片",
+        "description": "从STM32快照、BW16转发到Flutter解析、页面和错误测试，完成一个只读业务扩展。",
+        "href": "/docs/crabit/sensor-project/"
+      },
+      {
+        "slug": "update",
+        "title": "固件更新与恢复",
+        "description": "两颗芯片、成对版本和操作边界。",
+        "href": "/docs/crabit/update/"
+      }
+    ]
+  }
+]

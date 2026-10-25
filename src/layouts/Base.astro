@@ -1,0 +1,70 @@
+---
+import '../styles/site.css';
+
+interface Props {
+	title: string;
+	description?: string;
+	active?: string;
+}
+
+const {
+	title,
+	description = '一个持续整理硬件、软件与实验项目的入口。',
+	active = '',
+} = Astro.props;
+
+const navigation = [
+	{ id: 'projects', label: '项目', href: '/projects/' },
+	{ id: 'docs', label: '文档', href: '/docs/' },
+	{ id: 'blog', label: '记录', href: '/blog/' },
+	{ id: 'about', label: '关于', href: '/about/' },
+];
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#f7f9fc" />
+		<title>{title} · Studio Lab</title>
+	</head>
+	<body>
+		<div class="site-shell">
+			<header class="site-header">
+				<a class="site-brand" href="/" aria-label="Studio Lab 首页">
+					<span class="site-brand__name">STUDIO</span>
+					<span class="site-brand__index">/ 01</span>
+				</a>
+				<nav class="site-nav" aria-label="主导航">
+					{navigation.map((item) => (
+						<a
+							href={item.href}
+							aria-current={active === item.id ? 'page' : undefined}
+						>
+							{item.label}
+						</a>
+					))}
+				</nav>
+				<a class="header-cta" href="/products/crabit/">正在制作 <span aria-hidden="true">↗</span></a>
+			</header>
+
+			<main class="site-main"><slot /></main>
+
+			<footer class="site-footer">
+				<a class="site-brand site-brand--footer" href="/">
+					<span class="site-brand__name">STUDIO</span>
+					<span class="site-brand__index">/ 01</span>
+				</a>
+				<p>独立项目 · 硬件 · 软件 · 实验</p>
+				<nav aria-label="页脚导航">
+					<a href="/projects/">项目</a>
+					<a href="/docs/">文档</a>
+					<a href="/blog/">记录</a>
+					<a href="/about/">关于</a>
+				</nav>
+			</footer>
+		</div>
+	</body>
+</html>

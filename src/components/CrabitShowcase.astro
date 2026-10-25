@@ -1,0 +1,78 @@
+---
+import WatchInteractive from "./WatchInteractive.astro";
+---
+
+<div class="wrap">
+  <section class="hero" id="crabit">
+    <div class="hero-copy">
+      <h1>Crabit</h1>
+      <p>一块可以自己改的手表。</p>
+      <p class="secondary-copy">
+        无线测试、USB 脚本、小游戏。
+        <br />
+        还有一套可以自己写界面的 NanoUI。
+      </p>
+      <div class="hero-actions">
+        <a class="text-link" href="/docs/crabit/start/">
+          使用文档 ↗
+        </a>
+      </div>
+    </div>
+    <div class="model-panel">
+      <WatchInteractive />
+      <p class="model-caption">
+        拖动旋转，点侧键操作。NanoUI 本地模拟，不连接设备。
+      </p>
+    </div>
+  </section>
+  <section class="app-section" id="app" aria-labelledby="app-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="app-title">手表之外，还有 App。</h2>
+        <p>
+          连接与设置、脚本编辑、时间与天气。
+          <br />
+          Flutter 编写，手机和电脑都能参与。
+        </p>
+      </div>
+      <a class="text-link" href="/docs/crabit/connect/">
+        了解 App ↗
+      </a>
+    </div>
+    <div class="app-platforms">
+      <figure class="app-showcase">
+        <a href="/app/home.png" aria-label="查看完整 App 首页截图">
+          <img
+            src="/app/home.png"
+            alt="Flutter App 完整首页，包含手表模型、设备连接与功能入口"
+            width="1283"
+            height="824"
+            loading="lazy"
+          />
+        </a>
+        <figcaption>电脑端 · 完整首页（此前实机截图）</figcaption>
+      </figure>
+      <figure class="app-showcase phone">
+        <a href="/app/settings.png" aria-label="查看手机端 App 设置页面示例">
+          <img
+            src="/app/settings.png"
+            alt="Flutter 手机尺寸的手表设置界面，示例参数，非实机读数"
+            width="390"
+            height="1100"
+            loading="lazy"
+          />
+        </a>
+        <figcaption>
+          手机端 · 设置界面示例，非实机读数。
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="docs-line">
+    <h2>想自己动手？</h2>
+    <div>
+      <a href="/docs/crabit/update/">更新固件 ↗</a>
+      <a href="/docs/crabit/develop/">二次开发 ↗</a>
+    </div>
+  </section>
+</div>

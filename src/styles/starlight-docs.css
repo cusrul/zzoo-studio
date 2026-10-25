@@ -1,0 +1,59 @@
+/* ZZOO documentation: neutral surfaces and restrained warm accents. */
+.sl-markdown-content img[src*='/media/'] {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 560px;
+  margin-inline: auto;
+}
+:root {
+	--sl-hue-blue: 0;
+	--sl-hue-green: 87;
+	--sl-hue-orange: 0;
+	--sl-hue-purple: 0;
+	--sl-hue-red: 0;
+	--sl-color-blue-low: #303134;
+	--sl-color-blue: #9aa0a6;
+	--sl-color-blue-high: #e8eaed;
+	--sl-color-green-low: #303134;
+	--sl-color-green: #9aa0a6;
+	--sl-color-green-high: #e8eaed;
+	--sl-color-orange-low: #303134;
+	--sl-color-orange: #9aa0a6;
+	--sl-color-orange-high: #e8eaed;
+	--sl-color-purple-low: #303134;
+	--sl-color-purple: #9aa0a6;
+	--sl-color-purple-high: #e8eaed;
+	--sl-color-red-low: #303134;
+	--sl-color-red: #9aa0a6;
+	--sl-color-red-high: #e8eaed;
+	--sl-color-accent-low: #332519;
+	--sl-color-accent: #ff9c45;
+	--sl-color-accent-high: #ffe2c5;
+	--sl-color-text-accent: #ffb77a;
+	--sl-color-bg-accent: #ff9c45;
+}
+
+:root[data-theme='light'] {
+	--sl-color-blue-low: #f1f3f4;
+	--sl-color-blue: #5f6368;
+	--sl-color-blue-high: #202124;
+	--sl-color-green-low: #f1f3f4;
+	--sl-color-green: #5f6368;
+	--sl-color-green-high: #202124;
+	--sl-color-orange-low: #f1f3f4;
+	--sl-color-orange: #5f6368;
+	--sl-color-orange-high: #202124;
+	--sl-color-purple-low: #f1f3f4;
+	--sl-color-purple: #5f6368;
+	--sl-color-purple-high: #202124;
+	--sl-color-red-low: #f1f3f4;
+	--sl-color-red: #5f6368;
+	--sl-color-red-high: #202124;
+	--sl-color-accent-low: #fff0e0;
+	--sl-color-accent: #99500c;
+	--sl-color-accent-high: #713801;
+	--sl-color-text-accent: #99500c;
+	--sl-color-bg-accent: #99500c;
+	--sl-color-text-invert: #fff;
+}
