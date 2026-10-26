@@ -1,0 +1,15 @@
+{
+  "description": "Hardware annotation based on maintainer-supplied Altium screenshots. Design view, not evidence of fitted components. No CAD geometry or firmware changed.",
+  "input": {
+    "filename": "codex-clipboard-6e2c1411-8a1b-4952-a06c-d7d5dc25c51b.png",
+    "sha256": "d0cfcf0d2e69b26eba7a997e342aca85f56d91badf5ef0fcf25cb7442f73c8cd",
+    "operations": ["crop software chrome", "overlay component labels and leaders"]
+  },
+  "output": {
+    "filename": "hardware-components.png",
+    "sha256": "75cf7e3a252ec48b5f665e2b53443f0dc9efb9697c1295ccd5e5575c5ad1452d",
+    "width": 1200,
+    "height": 1200
+  },
+  "limitation": "MMC5693NJ is not fitted and has no driver, as confirmed by the maintainer. Older web GLB reference designators differ; not used for this annotation."
+}

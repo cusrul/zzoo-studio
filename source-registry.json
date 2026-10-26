@@ -2,7 +2,7 @@
   {
     "id": "crabit",
     "repository": null,
-    "ref": "0a26ca553b87fcf1cb2b1deb77d0aacf034a00e9",
+    "ref": "284a55298186085778d02babb7bae489ae097684",
     "manifest": "showcase/product.json",
     "pages": [
       { "source": "showcase/docs/overview.md", "slug": "overview" },
@@ -10,6 +10,7 @@
       { "source": "showcase/docs/connect.md", "slug": "connect" },
       { "source": "showcase/docs/app-guide.md", "slug": "app-guide" },
       { "source": "showcase/docs/replicate.md", "slug": "replicate" },
+      { "source": "showcase/docs/hardware-map.md", "slug": "hardware-map" },
       { "source": "showcase/docs/develop.md", "slug": "develop" },
       { "source": "showcase/docs/setup.md", "slug": "setup" },
       { "source": "showcase/docs/first-app.md", "slug": "first-app" },

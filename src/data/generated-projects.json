@@ -53,6 +53,12 @@
         "href": "/docs/crabit/replicate/"
       },
       {
+        "slug": "hardware-map",
+        "title": "认识硬件：芯片、传感器与分工",
+        "description": "对照维护者提供的 AD 原理图和 PCB 视图，区分正在使用的器件与未装配预留。",
+        "href": "/docs/crabit/hardware-map/"
+      },
+      {
         "slug": "develop",
         "title": "开始二次开发",
         "description": "NanoUI、双端固件与 Flutter 的入口。",
