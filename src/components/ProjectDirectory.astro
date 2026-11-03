@@ -1,9 +1,13 @@
 ---
 import projects from "../data/generated-projects.json";
 import WatchInteractive from "./WatchInteractive.astro";
+const { carousel = false } = Astro.props;
+const canRotate = carousel && projects.length > 1;
 ---
 
-<section aria-label="项目目录">
+<section class:list={["project-directory", { "project-carousel": canRotate }]} aria-label="项目目录" data-project-carousel={canRotate ? "" : undefined}>
+ <div class="project-window">
+  <div class="project-track">
   {projects.map((project) => (
     <article class="project-entry">
       <div>
@@ -30,4 +34,19 @@ import WatchInteractive from "./WatchInteractive.astro";
       )}
     </article>
   ))}
+  </div>
+ </div>
+ {canRotate && (
+   <div class="project-switcher" hidden>
+     <button type="button" data-previous aria-label="上一个项目">←</button>
+     <span data-position>1 / {projects.length}</span>
+     <button type="button" data-next aria-label="下一个项目">→</button>
+     <button type="button" data-pause aria-pressed="false">暂停轮播</button>
+   </div>
+ )}
 </section>
+
+<script>
+  import { mountProjectCarousels } from "../scripts/project-carousel.js";
+  mountProjectCarousels();
+</script>

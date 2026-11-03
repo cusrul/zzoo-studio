@@ -4,6 +4,12 @@ const {
   title = "ZZOO 动动物园",
   description = "ZZOO 动动物园的硬件、软件与开源项目。体验作品，查阅文档，动手开发。",
 } = Astro.props;
+const publicLinks = [
+  { label: "淘宝店铺", href: "https://7l2ggxehxy16y5ayzrou5ygndnxaatk.taobao.com/" },
+  { label: "闲鱼主页", href: "https://www.goofish.com/personal?userId=4183904906" },
+  { label: "GitHub", href: "https://github.com/cusrul" },
+  { label: "B站", href: "https://space.bilibili.com/378996894" },
+];
 ---
 
 <!doctype html>
@@ -37,18 +43,12 @@ const {
       <slot />
     </main>
     <footer class="site-footer wrap" id="stores">
-      <div class="store-list" aria-label="店铺与代码主页">
-        <span>
-          淘宝店铺 <small>待开放</small>
-        </span>
-        <span>
-          闲鱼主页 <small>待开放</small>
-        </span>
-        <span>
-          GitHub 主页 <small>待开放</small>
-        </span>
-      </div>
-      <small>本地预览</small>
+      <nav class="store-list" aria-label="公共链接与交流">
+        {publicLinks.map(({ label, href }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+        ))}
+        <span>QQ 交流群：2156052701</span>
+      </nav>
     </footer>
   </body>
 </html>

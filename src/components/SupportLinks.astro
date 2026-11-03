@@ -1,0 +1,28 @@
+---
+const { projectId = "" } = Astro.props;
+---
+
+<aside class="support-links" aria-label="问题反馈与交流">
+  <p>
+    遇到问题？
+    {projectId === "crabit" && (
+      <Fragment>
+        可以到 <a href="https://github.com/cusrul/Crabit/issues" target="_blank" rel="noopener noreferrer">GitHub 提 Issue</a>，
+      </Fragment>
+    )}
+    也可以加入 QQ 交流群：2156052701。
+  </p>
+  <p>提问时请附上固件或 App 版本、操作步骤和报错截图，注意遮住验证码、密码等私人信息。</p>
+</aside>
+
+<style>
+  .support-links {
+    border-top: 1px solid var(--sl-color-hairline, #e5e5df);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-2, #74746e);
+  }
+  .support-links p { margin: 0 0 0.5rem; }
+  .support-links a { text-decoration: underline; text-underline-offset: 3px; }
+</style>

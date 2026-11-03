@@ -1,0 +1,8 @@
+---
+import DefaultFooter from "@astrojs/starlight/components/Footer.astro";
+import SupportLinks from "./SupportLinks.astro";
+const projectId = Astro.url.pathname.split("/").includes("crabit") ? "crabit" : "";
+---
+
+<SupportLinks projectId={projectId} />
+<DefaultFooter><slot /></DefaultFooter>

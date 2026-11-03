@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import test from "node:test";
 
 test("built homepage presents the real logo and Flutter screens without prices or product sales links", () => {
@@ -13,8 +13,43 @@ test("built homepage presents the real logo and Flutter screens without prices o
   assert.doesNotMatch(html, /[¥￥]\s*\d|priceCny|href="\/products\//);
   assert.match(html, /淘宝店铺/);
   assert.match(html, /闲鱼主页/);
-  assert.match(html, /待开放/);
-  assert.doesNotMatch(html, /href="[^\"]*(?:taobao|goofish|xianyu)[^\"]*"/i);
+  const footer = html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
+  assert.ok(footer);
+  for (const href of [
+    "https://7l2ggxehxy16y5ayzrou5ygndnxaatk.taobao.com/",
+    "https://www.goofish.com/personal?userId=4183904906",
+    "https://github.com/cusrul",
+    "https://space.bilibili.com/378996894",
+  ]) {
+    assert.ok(footer.includes(`href="${href}"`));
+  }
+  assert.match(footer, /QQ 交流群：2156052701/);
+  assert.doesNotMatch(footer, /本地预览|待开放|非个人 QQ|topIds=|shopSearchKeyword=|spm=/);
+});
+
+test("Crabit documentation has public issue and group help without rewriting imported snapshots", () => {
+  const root = "dist/docs/crabit";
+  const paths = ["index.html", ...readdirSync(root, { withFileTypes: true })
+    .filter(entry => entry.isDirectory()).map(entry => `${entry.name}/index.html`)];
+  for (const path of paths) {
+    const html = readFileSync(`${root}/${path}`, "utf8");
+    assert.ok(html.includes('href="https://github.com/cusrul/Crabit/issues"'), path);
+    assert.match(html, /2156052701/, path);
+    assert.match(html, /操作步骤/, path);
+    assert.doesNotMatch(html, /192\.168\.2\.226/);
+  }
+});
+
+test("homepage enables rotation only for multiple real projects", () => {
+  const html = readFileSync("dist/index.html", "utf8");
+  const projects = JSON.parse(readFileSync("src/data/generated-projects.json", "utf8"));
+  if (projects.length > 1) {
+    assert.match(html, /<section\b[^>]*\bdata-project-carousel/);
+    assert.match(html, /<button\b[^>]*\bdata-next/);
+  } else {
+    assert.doesNotMatch(html, /<section\b[^>]*\bdata-project-carousel|<button\b[^>]*\bdata-(?:previous|next)/);
+  }
+  assert.equal((html.match(/class="project-entry"/g) || []).length, projects.length);
 });
 
 test("brand navigation and documentation directory are project-neutral", () => {

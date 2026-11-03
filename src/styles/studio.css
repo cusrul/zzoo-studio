@@ -182,15 +182,15 @@ figcaption {
 .store-list {
   margin-left: auto;
   display: flex;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 14px 26px;
 }
+.store-list > a,
 .store-list > span {
   color: #33332f;
 }
-.store-list small {
-  color: var(--muted);
-  margin-left: 8px;
-  font-size: 10px;
+.store-list > span {
+  white-space: nowrap;
 }
 .site-footer > small {
   font-size: 10px;
@@ -258,6 +258,38 @@ figcaption {
 }
 .project-entry h2 {
   font-size: 44px;
+}
+.project-carousel[data-ready] .project-window {
+  overflow: hidden;
+}
+.project-carousel[data-ready] .project-track {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 550ms ease;
+}
+.project-carousel[data-ready] .project-entry {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.project-switcher:not([hidden]) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  padding-bottom: 24px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.project-switcher button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 8px;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-carousel[data-ready] .project-track { transition: none; }
 }
 .project-breadcrumb {
   padding-top: 24px;

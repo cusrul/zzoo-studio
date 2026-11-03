@@ -13,6 +13,7 @@ export default defineConfig({
     starlight({
       title: "ZZOO 动动物园 · 文档",
       customCss: ["./src/styles/starlight-docs.css"],
+      components: { Footer: "./src/components/DocsFooter.astro" },
       disable404Route: true,
       locales: {
         root: { label: "简体中文", lang: "zh-CN" },
