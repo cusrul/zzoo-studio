@@ -22,6 +22,9 @@ const canRotate = carousel && projects.length > 1;
           <a class="text-link" href={`/docs/${project.id}/`}>
             使用文档 ↗
           </a>
+          {project.id === "crabit" && <a class="text-link" href="https://github.com/cusrul/Crabit" target="_blank" rel="noopener noreferrer">
+            项目仓库 ↗
+          </a>}
         </div>
       </div>
       {project.id === "crabit" && (
