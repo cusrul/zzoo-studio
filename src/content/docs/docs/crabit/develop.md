@@ -16,6 +16,8 @@ description: "NanoUI、双端固件与 Flutter 的入口。"
 | 1 | [第一个 NanoUI App](/docs/crabit/first-app/) | Windows 出图，知道运行哪个exe，能改标题 |
 | 2 | [从一个开关看懂 NanoUI](/docs/crabit/ui-development/) | 自己组合两个开关，解释状态、输入、布局和对象寿命 |
 | 3 | [字体与图片](/docs/crabit/resources/) | 知道资源属于哪个App，能定位缺字而不复制整个字体库 |
+| 3a | [新增 STM32 App](/docs/crabit/stm32-first-app/) | 自己创建计数器、注册真实菜单，再显示有效传感器快照 |
+| 3b | [新增 BW16 App](/docs/crabit/bw16-first-app/) | 复用计数器、注册 BW16 菜单，理解 UI 模式和镜像检查 |
 | 4 | [第一个Flutter页面](/docs/crabit/flutter-first-page/) | 不连设备，也能新增页面、改文字、按按钮改变数字 |
 | 5 | [系统源码导读](/docs/crabit/system-walkthrough/)与[Flutter源码导读](/docs/crabit/flutter-development/) | 带着前面做过的操作，追踪启动、数据与请求 |
 | 6 | [贯通练习](/docs/crabit/integration-lab/) | 修改既有只读请求并验证，不重写BLE或烧录桥 |
@@ -70,4 +72,4 @@ Windows 桌面构建还需要对应 C++ 工具链。源码包含多个平台工�
 不要顺手重写供电、OLED交接、串口切换、烧录桥与 Flash 布局。
 相关构建和边界见[固件与恢复](/docs/crabit/update/)。
 
-硬件制造资料与配套发布包尚待补全；在此之前先用 Windows 示例学习，不根据模拟器画面尝试接线或首次上电。
+公开仓库已有硬件工程和预览版下载；最新本地候选与公开附件可能不同。制造、首次上电与具体接口接线仍需核对硬件版本；不根据模拟器画面尝试接线。第一次写真实设备 App 按上面的两个动手章节，不从驱动代码开始改。

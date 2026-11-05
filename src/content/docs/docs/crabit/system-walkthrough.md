@@ -47,6 +47,7 @@ FreeRTOS 的“任务”是调度单位；NanoUI 的“App”是产品的应用�
 前三部分依次是图标、名称、确认动作。这里的 lambda 是点击时才执行的函数，不是在构建菜单时就启动传感器页。
 
 想新增纯 UI 页面时，应新增自己的 Application 头文件、在产品 launcher 中包含它、再添加同形菜单项；不要向 WindowManager 塞入产品菜单名称。
+逐步创建文件、菜单注册和运行示例见[新增 STM32 App](/docs/crabit/stm32-first-app/)与[新增 BW16 App](/docs/crabit/bw16-first-app/)。
 先把应用内容换成桌面示例验证过的静态文字与开关，再接传感器。产品 MCU 构建见[更新与构建](/docs/crabit/update/)，本章不要求先烧录。
 
 ## 4. 传感器值不是 UI 自己去总线上读

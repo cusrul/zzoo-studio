@@ -156,6 +156,24 @@ test('curated raster images are scoped to their project and unsafe media paths f
   }
 });
 
+test('relative product raster media maps to a scoped site URL without allowing raw files', () => {
+  for (const [image, allowed] of [
+    ['../media/ui/tutorial-counter.png', true],
+    ['../media/raw/private.png', false],
+    ['../media/ui/tutorial-counter.svg', false],
+    ['../media/ui/tutorial-counter.png?download=1', false],
+    ['../../../../private.png', false],
+  ]) {
+    const fixture = createFixture({pages: [{source: 'showcase/docs/start.md', slug: 'start', content: `---\ntitle: Counter\n---\n\n![App](${image})\n`}]});
+    if (allowed) {
+      invoke(fixture);
+      assert.match(readGenerated(fixture, 'src/content/docs/docs/crabit/start.md'), /\/media\/crabit\/tutorial-counter\.png/);
+    } else {
+      assert.throws(() => invoke(fixture), /allowlisted relative/);
+    }
+  }
+});
+
 test('reads the pinned commit, not newer commits or dirty worktree content', () => {
   const fixture = createFixture();
   const startFile = join(fixture.repository, 'showcase', 'docs', 'start.md');

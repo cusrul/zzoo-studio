@@ -2,7 +2,7 @@
   {
     "id": "crabit",
     "repository": null,
-    "ref": "284a55298186085778d02babb7bae489ae097684",
+    "ref": "b47b3bd61417934fa81172c6fd3918318f62d973",
     "manifest": "showcase/product.json",
     "pages": [
       { "source": "showcase/docs/overview.md", "slug": "overview" },
@@ -15,6 +15,8 @@
       { "source": "showcase/docs/setup.md", "slug": "setup" },
       { "source": "showcase/docs/first-app.md", "slug": "first-app" },
       { "source": "showcase/docs/ui-development.md", "slug": "ui-development" },
+      { "source": "showcase/docs/stm32-first-app.md", "slug": "stm32-first-app" },
+      { "source": "showcase/docs/bw16-first-app.md", "slug": "bw16-first-app" },
       { "source": "showcase/docs/resources.md", "slug": "resources" },
       { "source": "showcase/docs/flutter-first-page.md", "slug": "flutter-first-page" },
       { "source": "showcase/docs/system-walkthrough.md", "slug": "system-walkthrough" },

@@ -8,11 +8,11 @@ description: "在Windows上准备第一条学习路线，分清编辑器、编�
 
 只使用手表需要成品App，不需要开发工具，回到[使用路线](/docs/crabit/start/)。想改功能才需要完整源码。源码是可编辑的文字，exe是编译后运行的程序，不能靠编辑exe开发。
 
-本站尚未配置公开源码与发行包下载地址。已有源码可继续；只有网页的人先向维护者取得带版本说明的完整源码包。不要把网页另存为当成下载源码，也不要从历史实验目录拼工程。
+源码可从 [Crabit GitHub 仓库](https://github.com/cusrul/Crabit)获取；Windows、Android 和固件预览包见 [Releases](https://github.com/cusrul/Crabit/releases)。先阅读[下载说明](https://github.com/cusrul/Crabit/blob/main/docs/downloads.md)，确认版本、适用范围与限制。不要把网页另存为当成下载源码，也不要从历史实验目录拼工程。
 
 ## 1. 打开完整项目
 
-将维护者提供的源码ZIP解压到自己有写入权限的本地文件夹。以下用 `C:\CrabitLearning\crabit` 举例，你可选别处；不能照抄成自己电脑不存在的路径。
+从 GitHub 仓库的“Code → Download ZIP”下载源码，解压到自己有写入权限的本地文件夹；也可以使用 Git 克隆。以下用 `C:\CrabitLearning\crabit` 举例，你可选别处；不能照抄成自己电脑不存在的路径。
 
 在资源管理器进入同一层能看到以下内容的位置：
 

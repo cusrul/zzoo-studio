@@ -395,6 +395,12 @@ function rewriteDestination(raw, currentPage, pages, projectId, sourcePath, imag
     fail(`${sourcePath} contains an invalid encoded Markdown link.`);
   }
   if (!decodedPath || decodedPath.startsWith('/') || !decodedPath.toLowerCase().endsWith('.md')) {
+    // Product docs use relative raster paths so images also work on GitHub.
+    // Only curated project media can map to the site's existing public folder.
+    const mediaPath = resolveSourceDocPath(currentPage, decodedPath);
+    if (image && !urlSuffix && /^showcase\/media\/(?:ui|assembly|hardware)\/[a-z0-9]+(?:-[a-z0-9]+)*\.(?:webp|png|jpg)$/.test(mediaPath)) {
+      return `/media/${projectId}/${posix.basename(mediaPath)}`;
+    }
     fail(`${sourcePath} may link only to an allowlisted relative .md page.`);
   }
   const normalized = resolveSourceDocPath(currentPage, decodedPath);

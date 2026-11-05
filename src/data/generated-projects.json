@@ -2,7 +2,7 @@
   {
     "id": "crabit",
     "title": "Crabit",
-    "tagline": "戴在手上的极客小玩具",
+    "tagline": "软硬件开源、可以自己编程的手表",
     "priceCny": 120,
     "status": "现货 · 单一配置",
     "includes": [
@@ -81,6 +81,18 @@
         "title": "从一个开关看懂 NanoUI",
         "description": "用完整可运行的双开关界面学习布局、状态、输入、绘制和生命周期。",
         "href": "/docs/crabit/ui-development/"
+      },
+      {
+        "slug": "stm32-first-app",
+        "title": "在 STM32 手表上新增你的第一个 App",
+        "description": "从完整计数器到菜单注册、传感器快照、编译、运行和恢复，连接桌面练习与真实手表。",
+        "href": "/docs/crabit/stm32-first-app/"
+      },
+      {
+        "slug": "bw16-first-app",
+        "title": "在 BW16 上新增一个不碰无线的 App",
+        "description": "复用 Counter、注册 BW16 菜单、理解协同应用与 UI 模式，并完成构建和镜像检查。",
+        "href": "/docs/crabit/bw16-first-app/"
       },
       {
         "slug": "resources",
